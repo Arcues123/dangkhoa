@@ -1,0 +1,13 @@
+.link2{
+         position: absolute;
+         background-color: aliceblue;
+         width: 360px;
+         height: 293px;
+         transform: translate(1006px, -200px);
+         border-radius: 10px;
+}
+.text1{
+         text-align: center;
+         background-color: rgb(180, 184, 187);
+         border-radius: 10px;
+}

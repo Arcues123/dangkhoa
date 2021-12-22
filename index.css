@@ -1,0 +1,82 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+	font-family: Gotham Rounded,  sans-serif;
+}
+
+body {
+	background-image: url(greenery-beautiful-scenery-green-trees-background-forest-nature-scenery.jpg);
+}
+
+.clock {
+	width: 100px;
+	height: 100px;
+	background-color:  rgba(255, 255, 255, .8);
+	border-radius: 50%;
+	border: 2px solid black; 
+}
+
+.clock .number {
+	--rotation: 0;
+	font-size: 10px;
+	position: absolute;
+	width: 95px;
+	height: 95px;
+	text-align: center;
+	transform: rotate(var(--rotation));
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+	--rotation: 0;
+	position: absolute;
+	bottom: 92.1%;
+	left: 3.6%;
+	background-color: black;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform-origin: bottom;
+	z-index: 10;
+	transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+}
+
+.clock::after {
+	content: '';
+	position: absolute;
+	background-color: black;
+	z-index: 11;
+	width: 10px;
+	height: 10px;
+	top: 7.9%;
+	left: 3.6%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.clock .hand.second {
+	width: 0.1px;
+	height: 5%;
+	background-color: red;
+}
+
+.clock .hand.minute {
+	width: 4.1px;
+	height: 5%;
+	background-color: black;
+}
+
+.clock .hand.hour {
+	width: 7.1px;
+	height: 5%;
+	background-color: black;
+}
